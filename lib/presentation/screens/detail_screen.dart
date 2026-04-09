@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../../core/theme.dart';
 import '../../domain/entities/idea.dart';
 import '../providers/idea_provider.dart';
@@ -118,8 +119,25 @@ class DetailScreen extends ConsumerWidget {
                                 refText,
                                 style: const TextStyle(color: AppTheme.accentCyan, decoration: TextDecoration.underline),
                               ),
-                              onTap: () {
-                                // Logic to open URL if it's a link
+                              onTap: () async {
+                                final urlText = refText.trim();
+                                if (urlText.isEmpty) return;
+                                
+                                String parsedUrl = urlText;
+                                if (!parsedUrl.startsWith('http://') && !parsedUrl.startsWith('https://')) {
+                                  parsedUrl = 'https://$parsedUrl';
+                                }
+                                
+                                final uri = Uri.parse(parsedUrl);
+                                try {
+                                  await launchUrl(uri, mode: LaunchMode.externalApplication);
+                                } catch (e) {
+                                  if (context.mounted) {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(content: Text('Bukan link yang valid atau tidak dapat dibuka: $refText')),
+                                    );
+                                  }
+                                }
                               },
                             ),
                           ),
