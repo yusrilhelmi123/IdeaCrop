@@ -1,9 +1,9 @@
-# 💡 IdeaCrop
+# IdeaCrop
 
 **IdeaCrop - Harvest Your Thoughts**
 Aplikasi pengumpulan ide yang dirancang khusus untuk membantu para inovator menangkap dan membudidayakan inspirasi secara praktis, kapan saja dan di mana saja.
 
-## ✨ Fitur Utama
+## Fitur Utama
 
 - **Layar Pembuka Interaktif (_Splash Screen_)**
   Menyambut Anda dengan salam dinamis yang otomatis menyesuaikan waktu lokal perangkat Anda (Pagi/Siang/Sore/Malam), memberikan sentuhan magis sebelum masuk ke sistem.
@@ -20,7 +20,7 @@ Aplikasi pengumpulan ide yang dirancang khusus untuk membantu para inovator mena
 - **Penyimpanan Instan & Aman (*Offline-First*)**
   Dilengkapi dengan integrasi `Hive` database yang *ultra-fast*. Tak perlukan internet. Semua aset karya pikiran Anda dijamin tersimpan aman di memori lokal smartphone Anda.
 
-## 🛠 Teknologi Pendahulu (Stack)
+## Teknologi Pendahulu (Stack)
 
 - **Flutter / Dart** (SDK ^3.11.1)
 - **Riverpod** - *State management* interaktif tingkat atas
@@ -28,7 +28,7 @@ Aplikasi pengumpulan ide yang dirancang khusus untuk membantu para inovator mena
 - **Intl** - Manajemen tanggal & zona waktu dinamis
 - **Flutter Launcher Icons** - Standarisasi visual identitas di _Home Screen_
 
-## 🚀 Cara Menjalankan (*How to Run*)
+## Cara Menjalankan (*How to Run*)
 
 Pastikan Anda telah memasang **Flutter SDK** versi 3.11 ke atas.
 
@@ -44,7 +44,7 @@ Pastikan Anda telah memasang **Flutter SDK** versi 3.11 ke atas.
 
 *(Apabila Anda mengalami masalah "Not recognized / Spasi", pastikan nama folder root (_Path_) dari direktori tempat menaruh source code ini **TIDAK MENGANDUNG SPASI** dan pastikan environment variable flutter telah diarahkan pada letak instalasi yang benar).*
 
-## 📦 Mengemas ke bentuk APK 
+## Mengemas ke bentuk APK 
 
 Untuk mencetak aplikasi ke bentuk _release_ APK untuk smartphone asli Anda, jalankan perintah singkat berikut:
 ```bash
